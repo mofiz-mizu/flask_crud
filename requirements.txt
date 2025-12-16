@@ -1,0 +1,19 @@
+# Flask
+# Flask-SQLAlchemy
+# Flask-Migrate
+# Flask-Marshmallow
+# marshmallow-sqlalchemy
+# python-dotenv
+# pymysql
+# gunicorn
+
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Marshmallow
+Flask-JWT-Extended
+marshmallow-sqlalchemy
+python-dotenv
+pymysql
+bcrypt
+gunicorn
