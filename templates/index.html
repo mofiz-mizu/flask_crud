@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Users{% endblock %} {% block content
+%}
+<a
+  href="{{ url_for('create') }}"
+  class="bg-green-600 text-white px-4 py-2 rounded"
+>
+  Add User
+</a>
+
+<table class="mt-6 w-full bg-white shadow rounded">
+  <thead class="bg-gray-200">
+    <tr>
+      <th class="p-2">ID</th>
+      <th class="p-2">Name</th>
+      <th class="p-2">Email</th>
+      <th class="p-2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr class="border-t">
+      <td class="p-2">{{ user.id }}</td>
+      <td class="p-2">{{ user.name }}</td>
+      <td class="p-2">{{ user.email }}</td>
+      <td class="p-2">
+        <a href="{{ url_for('edit', user_id=user.id) }}" class="text-blue-600"
+          >Edit</a
+        >
+        |
+        <a href="{{ url_for('delete', user_id=user.id) }}" class="text-red-600"
+          >Delete</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

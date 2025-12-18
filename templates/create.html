@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<form method="POST" class="bg-white p-6 rounded shadow w-1/2">
+  <input
+    name="name"
+    placeholder="Name"
+    class="w-full p-2 border mb-4"
+    required
+  />
+
+  <input
+    name="email"
+    placeholder="Email"
+    class="w-full p-2 border mb-4"
+    required
+  />
+
+  <button class="bg-blue-600 text-white px-4 py-2 rounded">Save</button>
+</form>
+{% endblock %}

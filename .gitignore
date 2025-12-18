@@ -1,0 +1,30 @@
+# --- Security & Environment ---
+.env               # Sensitive credentials (DB passwords, API keys)
+.env.local
+*.pem              # Security certificates/keys
+
+# --- Python ---
+__pycache__/       # Compiled Python files
+*.py[cod]          # Bytecode
+*.so               # C extensions
+.venv/             # Local virtual environment
+env/
+venv/
+build/             # Build artifacts
+dist/
+*.egg-info/
+
+# --- Docker & Databases ---
+# IMPORTANT: Ignore the folder where your MySQL data is stored on the host
+mysql_data/        # Matches the volume name in your docker-compose
+.docker-data/
+
+# --- IDE & System ---
+.vscode/           # VS Code settings
+.idea/             # PyCharm settings
+.DS_Store          # macOS specific files
+Thumbs.db          # Windows specific files
+
+# --- Logs ---
+*.log              # Application and error logs
+pip-log.txt
